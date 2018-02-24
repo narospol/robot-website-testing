@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180225 00:19:08.443" generator="Robot 3.0.2 (Python 2.7.13 on darwin)">
+<suite source="/Users/naros/Storage/workspace/MyHub/robot-website-testing/testcases/login.robot" id="s1" name="Login">
+<test id="s1-t1" name="Desktop - To verify system login by admin success">
+<kw name="Open Browser To Landing Page" library="common.keyword">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${WEB_BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180225 00:19:08.637" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000'</msg>
+<status status="PASS" endtime="20180225 00:19:11.371" starttime="20180225 00:19:08.637"></status>
+</kw>
+<status status="PASS" endtime="20180225 00:19:11.372" starttime="20180225 00:19:08.636"></status>
+</kw>
+<kw name="Go To Login Page" library="login.keyword">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${WEB_BASE_URL}/login</arg>
+</arguments>
+<msg timestamp="20180225 00:19:11.373" level="INFO">Opening url 'http://localhost:3000/login'</msg>
+<status status="PASS" endtime="20180225 00:19:11.799" starttime="20180225 00:19:11.373"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${login_div_block}</arg>
+</arguments>
+<status status="PASS" endtime="20180225 00:19:11.834" starttime="20180225 00:19:11.800"></status>
+</kw>
+<status status="PASS" endtime="20180225 00:19:11.834" starttime="20180225 00:19:11.372"></status>
+</kw>
+<kw name="Fill Input Login Form" library="login.keyword">
+<arguments>
+<arg>${USERNAME_ADMIN}</arg>
+<arg>${PASSWORD_ADMIN}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${login_input_username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180225 00:19:11.836" level="INFO">Typing text 'admin' into text field 'id=username'</msg>
+<status status="PASS" endtime="20180225 00:19:11.972" starttime="20180225 00:19:11.835"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${login_input_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180225 00:19:11.973" level="INFO">Typing password into text field 'id=password'</msg>
+<status status="PASS" endtime="20180225 00:19:12.108" starttime="20180225 00:19:11.973"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${login_button_submit}</arg>
+</arguments>
+<msg timestamp="20180225 00:19:12.108" level="INFO">Clicking element 'id=login-btn'.</msg>
+<status status="PASS" endtime="20180225 00:19:12.187" starttime="20180225 00:19:12.108"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20180225 00:19:14.191" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180225 00:19:14.191" starttime="20180225 00:19:12.188"></status>
+</kw>
+<status status="PASS" endtime="20180225 00:19:14.191" starttime="20180225 00:19:11.835"></status>
+</kw>
+<kw name="Verify Admin Page Is Visible" library="admin.keyword">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${admin_div_container}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20180225 00:19:14.218" starttime="20180225 00:19:14.192"></status>
+</kw>
+<status status="PASS" endtime="20180225 00:19:14.218" starttime="20180225 00:19:14.192"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20180225 00:19:16.219" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180225 00:19:16.220" starttime="20180225 00:19:14.219"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20180225 00:19:16.298" starttime="20180225 00:19:16.221"></status>
+</kw>
+<tags>
+<tag>desktop</tag>
+<tag>high</tag>
+<tag>login</tag>
+<tag>regression</tag>
+</tags>
+<status status="PASS" endtime="20180225 00:19:16.299" critical="yes" starttime="20180225 00:19:08.635"></status>
+</test>
+<status status="PASS" endtime="20180225 00:19:16.300" starttime="20180225 00:19:08.445"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">desktop</stat>
+<stat fail="0" pass="1">high</stat>
+<stat fail="0" pass="1">login</stat>
+<stat fail="0" pass="1">regression</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Login" pass="1">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

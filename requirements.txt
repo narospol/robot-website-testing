@@ -4,3 +4,4 @@ robotframework-databaselibrary
 robotframework-httplibrary
 robotframework-excellibrary
 robotframework-requests
+psycopg2
