@@ -14,3 +14,9 @@ Fill Input Login Form
     Input Password    ${login_input_password}    ${password}
     Click Element    ${login_button_submit}
     Sleep    2
+
+Verify Login Failure Dialog Is Visible
+    [Arguments]    ${error_text}
+    Wait Until Element Is Visible    ${login_div_notify}    ${TIMEOUT}
+    ${text}     Get Text    ${login_div_notify_text}
+    Should Be Equal    ${text}    ${error_text}
