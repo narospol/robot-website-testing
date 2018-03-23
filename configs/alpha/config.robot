@@ -5,13 +5,13 @@ ${BROWSER}             		  	Chrome
 ${SPEED}               		  	0.3
 ${TIMEOUT}    					      15
 
-${WEB_BASE_URL}               http://localhost:3000
+${WEB_BASE_URL}               https://robot-web-testing.herokuapp.com
 
 #************************** Database Variables
-${DB_HOSTNAME}         			  ec2-23-21-220-48.compute-1.amazonaws.com
-${DB_USERNAME}         			  zgqabeytemrdzf
-${DB_PASSWORD}         			  b914769b64f3daee6bf092a573bbe487e3f3c9e65e8e25381935394aecef1db4
-${DB_NAME}             			  ded8vtn4af0bkg
+${DB_HOSTNAME}         			  ec2-54-83-192-68.compute-1.amazonaws.com
+${DB_USERNAME}         			  bnanpldhbmltdo
+${DB_PASSWORD}         			  394471855cb890591b1cbc85c528724abb2691eb5c9414695cfa28d10843a7a2
+${DB_NAME}             			  de8l5buj6j3i1s
 ${DB_CHARSET}          			  utf8
 ${DB_PORT}             			  5432
 
