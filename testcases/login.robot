@@ -1,9 +1,7 @@
 *** Settings ***
 Test Teardown     Close All browsers
-Library           Selenium2Library
-Resource          ${CURDIR}/../keywords/common/common.keyword.robot
-Resource          ${CURDIR}/../keywords/login.keyword.robot
-Resource          ${CURDIR}/../keywords/admin.keyword.robot
+Resource          ${CURDIR}/../keywords/keyword.robot
+
 
 *** Test Cases ***
 Desktop - Login by admin success
